@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Soma dos Números Pares</title>
+</head>
+<body>
+  <h2>Soma dos Números Pares de 3 até 15</h2>
+
+  <button onclick="somarPares()">Calcular Soma</button>
+
+  <h3 id="resultado"></h3>
+
+  <script>
+    function somarPares() {
+      let soma = 0;
+      for (let i = 3; i <= 15; i++) {
+        if (i % 2 === 0) { // verifica se é par
+          soma += i;
+        }
+      }
+      document.getElementById('resultado').innerText = `A soma dos números pares entre 3 e 15 é ${soma}.`;
+    }
+  </script>
+</body>
+</html>

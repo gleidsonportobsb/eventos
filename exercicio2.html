@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>  
+  <script>
+    let nome = prompt("Qual o seu nome?");
+    let peso = prompt("Qual o seu peso?");
+    let altura = prompt("Qual a sua altura?");
+    let imc = calcularIMC(peso, altura);
+    let classificacao = classificarIMC(imc);
+    alert("Nome: " + nome + "\n IMC: " + imc.toFixed(2) + "\n Classificação: " + classificacao)
+
+    function calcularIMC(peso, altura) {
+      return (peso / (altura*altura));
+    }
+
+    function classificarIMC(imc){
+      let classificacao;      
+      if (imc < 18.5)
+        classificacao = "Abaixo do peso";
+      else if (imc <=24.9) 
+        classificacao = "Peso normal";
+      else if (imc <=29.9) 
+        classificacao = "Sobrepeso";
+      else if (imc >29.9) 
+        classificacao = "Obesidade";     
+       return classificacao;
+      }
+  </script>
+</body>
+</html>
